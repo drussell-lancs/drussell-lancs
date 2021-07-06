@@ -1,6 +1,6 @@
 ---
 - name: Testing...   
-  hosts: psy-shiny.lancs.ac.uk
+  hosts: 10.42.67.248
   become: true
   become_user: root
   become_method: sudo
