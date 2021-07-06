@@ -16,8 +16,3 @@
       name: alien 
       state: present
       update_cache: yes
-
-    © 2021 GitHub, Inc.
-    Terms
-    Privacy
-    Security
