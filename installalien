@@ -1,0 +1,18 @@
+---
+- name: Testing...   
+  hosts: psy-shiny.lancs.ac.uk
+  become: true
+  become_user: root
+  become_method: sudo
+  #strategy: debug
+
+  module_defaults:
+    apt:
+      force_apt_get: yes
+
+  tasks:
+   - name: Just want to install alien for example...
+     apt: 
+      name: alien 
+      state: present
+      update_cache: yes
