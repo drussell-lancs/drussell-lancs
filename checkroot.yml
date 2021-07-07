@@ -1,13 +1,13 @@
 ---
-- hosts: all
-  gather_facts: no
+ - hosts: all
+   gather_facts: no
   
-  python_interpreter: /usr/bin/python3
+   python_interpreter: /usr/bin/python3
   
-  tasks:
-  -  name: Root FS usage
-     shell: df -h {{ FS_MOUNTPOINT }} |awk ' { print $5 } ' |grep -v Use
-     register: dfroot
+   tasks:
+   -  name: Root FS usage
+      shell: df -h {{ FS_MOUNTPOINT }} |awk ' { print $5 } ' |grep -v Use
+      register: dfroot
 
-  -  debug:
-       msg: "System {{ inventory_hostname }}'s root FS utiliation is {{ dfroot.stdout }}"
+   -  debug:
+        msg: "System {{ inventory_hostname }}'s root FS utiliation is {{ dfroot.stdout }}"
