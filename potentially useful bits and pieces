@@ -1,0 +1,8 @@
+[control]
+    <REDACTED HOST NAME> ansible_connection=local 
+ ansible_python_interpreter=/usr/bin/python3
+ 
+       
+   tasks:
+   - name: Setting host facts for Python interpreter
+      set_fact: ansible_python_interpreter: "/usr/bin/python3"
