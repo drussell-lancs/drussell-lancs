@@ -1,7 +1,11 @@
 ---
  - hosts: all
-   gather_facts: no
-  
+   gather_facts: yes
+   
+  - name: Setting host facts for Python interpreter
+      set_fact: 
+        ansible_python_interpreter: "/usr/bin/python3"
+        
    tasks:
    -  name: Root FS usage
       shell: df -h {{ FS_MOUNTPOINT }} |awk ' { print $5 } ' |grep -v Use
