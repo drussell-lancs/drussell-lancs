@@ -1,15 +1,16 @@
 ---
  - hosts: all
    gather_facts: yes
+      
+   tasks:
    
-  - name: Setting host facts for Python interpreter
+   - name: Setting host facts for Python interpreter
       set_fact: 
         ansible_python_interpreter: "/usr/bin/python3"
-        
-   tasks:
-   -  name: Root FS usage
+
+   - name: Root FS usage
       shell: df -h {{ FS_MOUNTPOINT }} |awk ' { print $5 } ' |grep -v Use
       register: dfroot
 
-   -  debug:
-        msg: "System {{ inventory_hostname }}'s FS utilisation for {{ FS_MOUNTPOINT }} is {{ dfroot.stdout }}"
+   - debug:
+      msg: "System {{ inventory_hostname }}'s FS utilisation for {{ FS_MOUNTPOINT }} is {{ dfroot.stdout }}"
