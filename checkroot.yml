@@ -3,7 +3,6 @@
    gather_facts: yes
       
    tasks:
-   
    - name: Setting host facts for Python interpreter
       set_fact: ansible_python_interpreter: "/usr/bin/python3"
 
