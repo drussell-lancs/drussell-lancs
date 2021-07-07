@@ -8,4 +8,4 @@
       register: dfroot
 
    -  debug:
-        msg: "System {{ inventory_hostname }}'s root FS utiliation is {{ dfroot.stdout }}"
+        msg: "System {{ inventory_hostname }}'s FS utilisation for {{ FS_MOUNTPOINT }} is {{ dfroot.stdout }}"
