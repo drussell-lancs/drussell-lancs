@@ -1,0 +1,22 @@
+---
+- name: Installer With Prompts
+  hosts: {{ HOSTS }}
+  serial: 1
+  become: true
+  become_user: root
+  become_method: sudo
+  #strategy: debug
+
+  module_defaults:
+    apt:
+      force_apt_get: yes
+
+  tasks:
+   - name: Just want to install software...
+     apt: 
+      name: {{ SOFTWARE }}
+      state: present
+      update_cache: yes
+      
+   - debug:
+       msg: "System {{ HOSTS }} has installed {{ SOFTWARE }}"
