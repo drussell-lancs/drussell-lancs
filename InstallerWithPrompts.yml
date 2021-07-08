@@ -20,4 +20,4 @@
       update_cache: yes
       
    - debug:
-       msg: "System "{{ HOSTS }}" has installed "{{ SOFTWARE }}""
+       msg: "System {{ HOSTS }} has installed {{ SOFTWARE }}"
