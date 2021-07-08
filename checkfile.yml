@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: psy-shiny.lancs.ac.uk
   serial: 1
   gather_facts: yes
 
