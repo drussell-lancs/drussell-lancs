@@ -3,8 +3,8 @@
     gather_facts: yes
     
   - name: File System Usage
-      shell: df -h {{ FS_MOUNTPOINT }} |awk ' { print $5 } ' |grep -v Use
+      shell: df -h "{{ FS_MOUNTPOINT }}" |awk ' { print $5 } ' |grep -v Use
       register: dfroot
       
   - debug:
-      msg: "System {{ inventory_hostname }}'s FS utilisation for {{ FS_MOUNTPOINT }} is {{ dfroot.stdout }}"
+      msg: "System "{{ inventory_hostname }}"'s FS utilisation for "{{ FS_MOUNTPOINT }}" is "{{ dfroot.stdout }}""
