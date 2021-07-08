@@ -2,10 +2,9 @@
 ---
 - name: Installer With Prompts
   hosts: "{{ HOSTS }}"
-  serial: 1
-  become: true
-  become_user: root
-  become_method: sudo
+  #become: true
+  #become_user: root
+  #become_method: sudo
   #strategy: debug
 
   module_defaults:
