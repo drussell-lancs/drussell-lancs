@@ -2,6 +2,7 @@
   - hosts: all
     gather_facts: yes
     
+    tasks:
   - name: File System Usage
       shell: df -h "{{ FS_MOUNTPOINT }}" |awk ' { print $5 } ' |grep -v Use
       register: dfroot
