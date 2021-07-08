@@ -16,7 +16,7 @@
      apt: 
       name: "{{ SOFTWARE }}"
       state: present
-      update_cache: yes
+#      update_cache: yes
       
-   - debug:
-       msg: "System {{ HOSTS }} has installed {{ SOFTWARE }}"
+#   - debug:
+ #      msg: "System {{ HOSTS }} has installed {{ SOFTWARE }}"
