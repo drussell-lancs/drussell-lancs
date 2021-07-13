@@ -1,0 +1,25 @@
+---
+- name: Installer With Prompts
+  #hosts: "{{ HOSTS }}"
+  hosts: 10.42.67.248
+  become: true
+  become_user: root
+  become_method: sudo
+  strategy: debug
+
+  module_defaults:
+    apt:
+      force_apt_get: yes
+
+  tasks:
+   - name: Install Software...   
+     apt: 
+#      name: "{{ SOFTWARE }}"
+      name: zzuf
+      state: present
+#      update_cache: yes
+     vars:
+       ansible_python_interpreter: /usr/bin/python3
+      
+#   - debug:
+ #      msg: "System {{ HOSTS }} has installed {{ SOFTWARE }}"
