@@ -16,3 +16,6 @@
       name: alien 
       state: present
       update_cache: yes
+      
+     vars:
+      allow_world_readable_tmpfiles: true
