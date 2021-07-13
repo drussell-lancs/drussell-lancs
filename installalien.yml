@@ -2,8 +2,8 @@
 - name: Testing...   
   hosts: 10.42.67.248
   become: true
-  become_user: 'root'
-  become_method: 'sudo'
+  #become_user: 'root'
+  #become_method: 'sudo'
   #strategy: debug
 
   module_defaults:
