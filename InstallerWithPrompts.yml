@@ -2,6 +2,7 @@
 ---
 - name: Installer With Prompts
   hosts: "{{ HOSTS }}"
+  ansible_python_interpreter: /usr/bin/python3
   #become: true
   #become_user: root
   #become_method: sudo
