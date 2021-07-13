@@ -2,7 +2,7 @@
 - name: Installer With Prompts
   #hosts: "{{ HOSTS }}"
   hosts: 10.42.67.248
-  become: true
+  #become: true
   #become_user: root
   #become_method: sudo
   #strategy: debug
