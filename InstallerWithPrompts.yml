@@ -19,7 +19,7 @@
       state: present
       update_cache: yes
      vars:
-       ansible_python_interpreter: $(which python3)
+       ansible_python_interpreter: /usr/bin/python --check
       
 #   - debug:
  #      msg: "System {{ HOSTS }} has installed {{ SOFTWARE }}"
