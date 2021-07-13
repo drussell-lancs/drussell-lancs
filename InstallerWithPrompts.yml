@@ -12,13 +12,14 @@
       force_apt_get: yes
 
   tasks:
-   - name: Just want to install software...
-     ansible_python_interpreter: /usr/bin/python3
+   - name: Just want to install software...   
      apt: 
 #      name: "{{ SOFTWARE }}"
       name: zzuf
       state: present
 #      update_cache: yes
+     vars:
+       ansible_python_interpreter: /usr/bin/python3
       
 #   - debug:
  #      msg: "System {{ HOSTS }} has installed {{ SOFTWARE }}"
