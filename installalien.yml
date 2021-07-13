@@ -4,6 +4,8 @@
   become: true
   become_user: root
   become_method: sudo
+  ansible_become_method: 'su'
+  ansible_become_exe: 'sudo -p "Password: " su -'
   #strategy: debug
 
   module_defaults:
