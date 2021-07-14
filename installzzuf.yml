@@ -4,7 +4,7 @@
   hosts: 10.42.67.12
   become: true
   become_user: root
-  become_method: sudo
+  become_method: su
   #strategy: debug
 
   module_defaults:
@@ -19,7 +19,7 @@
       state: latest
       update_cache: yes
      vars:
-       ansible_python_interpreter: /usr/bin/python
+       ansible_python_interpreter: "/usr/bin/python3"
       
 #   - debug:
  #      msg: "System {{ HOSTS }} has installed {{ SOFTWARE }}"
