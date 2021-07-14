@@ -1,7 +1,7 @@
 ---
 - name: Install Zzuf
   #hosts: "{{ HOSTS }}"
-  hosts: 10.42.67.248
+  hosts: 10.42.67.12
   #ansible_become_method: 'su'
   #ansible_become_exe: 'sudo -p "Password: " su -'
   become: true
