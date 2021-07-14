@@ -2,8 +2,8 @@
 ---
 - name: Installer With Prompts
   hosts: "{{ HOSTS }}"
-  #become: true
-  #become_user: root
+  become: true
+  become_user: root
   #become_method: sudo
   #strategy: debug
 
@@ -14,12 +14,12 @@
   tasks:
    - name: Just want to install software...   
      apt: 
-#      name: "{{ SOFTWARE }}"
-      name: zzuf
+      name: "{{ SOFTWARE }}"
+      #name: zzuf
       state: present
       update_cache: yes
-     vars:
-       ansible_python_interpreter: /usr/bin/python
+   #  vars:
+   #    ansible_python_interpreter: /usr/bin/python
       
-#   - debug:
- #      msg: "System {{ HOSTS }} has installed {{ SOFTWARE }}"
+    - debug:
+        msg: "System {{ HOSTS }} has installed {{ SOFTWARE }}"
