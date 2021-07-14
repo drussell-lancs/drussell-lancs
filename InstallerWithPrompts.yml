@@ -12,7 +12,8 @@
   tasks:
    - name: Just want to install software...   
      apt: 
-      name: "{{ SOFTWARE }}"
+      #name: "{{ SOFTWARE }}"
+      name: zzuf
       state: latest
       update_cache: yes
      vars:
