@@ -6,7 +6,7 @@
   tasks:
   - name: Copy file with owner and permissions
       copyfile:
-      src: /home/docker/ansible-eg.txt
+      src: /tmp/ansible-eg.txt
       dest: /tmp/ansible-eg.txt
       owner: foo
       group: foo
