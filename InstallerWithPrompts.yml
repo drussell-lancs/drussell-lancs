@@ -10,8 +10,9 @@
 
   tasks:
    - name: Install software...   
-     apt: 
-      name: zzuf
+     apt:
+      name: "{{ SOFTWARE }}"
+      #name: zzuf
       state: latest
       update_cache: yes
      vars:
