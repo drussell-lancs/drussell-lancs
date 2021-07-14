@@ -1,6 +1,6 @@
 ---
 - name: Installer With Prompts
-  hosts: 10.42.67.12
+  hosts: "{{ HOSTS }}"
   become: true
   become_user: root
 
