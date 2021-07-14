@@ -6,8 +6,8 @@
   tasks:
   - name: Copy file with owner and permissions
     copy:
-      src: /tmp/ansible-eg.txt
-      dest: /tmp/ansible-eg.txt
+      src: "/tmp/ansible-eg.txt"
+      dest: "/tmp/ansible-eg.txt"
       owner: foo
       group: foo
       mode: '0644'
