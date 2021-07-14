@@ -1,4 +1,3 @@
-
 ---
 - name: Installer With Prompts
   hosts: 10.42.67.12
@@ -10,9 +9,8 @@
       force_apt_get: yes
 
   tasks:
-   - name: Just want to install software...   
+   - name: Install software...   
      apt: 
-      #name: "{{ SOFTWARE }}"
       name: zzuf
       state: latest
       update_cache: yes
@@ -20,7 +18,7 @@
        ansible_python_interpreter: /usr/bin/python3
         
         
-        
+  # name: "{{ SOFTWARE }}"      
   #name: zzuf   
   #become_method: sudo
   #strategy: debug 
