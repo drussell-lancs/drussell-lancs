@@ -1,8 +1,13 @@
-- name: Copy file with owner and permissions
-  hosts: 10.42.67.12
-  copy:
-    src: /home/docker/ansible-eg.txt
-    dest: /tmp/ansible-eg.txt
-    owner: foo
-    group: foo
-    mode: '0644'
+---
+- hosts: 10.42.67.12
+  serial: 1
+  gather_facts: yes
+
+  tasks:
+  - name: Copy file with owner and permissions
+      copy:
+      src: /home/docker/ansible-eg.txt
+      dest: /tmp/ansible-eg.txt
+      owner: foo
+      group: foo
+      mode: '0644'
