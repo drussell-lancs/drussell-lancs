@@ -1,0 +1,8 @@
+- name: Copy file with owner and permissions
+  hosts: 10.42.67.12
+  ansible.builtin.copy:
+    src: /home/docker/ansible-eg.txt
+    dest: /tmp/ansible-eg.txt
+    owner: foo
+    group: foo
+    mode: '0644'
