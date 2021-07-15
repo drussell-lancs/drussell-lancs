@@ -5,7 +5,7 @@
  
   tasks:
   - name: Ping a machine
-    action: ping
+      action: ping
     
     
 #- task:
