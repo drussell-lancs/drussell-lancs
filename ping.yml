@@ -1,5 +1,9 @@
 ---
-- task:
-  hosts: 10.42.67.248
-- name: Example from an Ansible Playbook
-  ansible.builtin.ping:
+#- task:
+#  hosts: 10.42.67.248
+#- name: Example from an Ansible Playbook
+#  ansible.builtin.ping:
+- hosts:
+    - all
+  tasks:
+    - action: ping
