@@ -2,13 +2,25 @@
 - hosts: 10.42.67.248
   serial: 1
   gather_facts: yes
-
-- name: Ping a machine
+ 
   tasks:
-    - action: ping
+  - name: Ping a machine
+    action: ping
     
     
 #- task:
 #  hosts: 10.42.67.248
 #- name: Example from an Ansible Playbook
 #  ansible.builtin.ping:
+#---
+#- hosts: 10.42.67.248
+#  serial: 1
+#  gather_facts: yes
+
+ # tasks:
+ # -  name: Root FS usage
+ #    shell: df -h {{ FS_MOUNTPOINT }} |awk ' { print $5 } ' |grep -v Use
+#     register: dfroot
+
+#  -  debug:
+#       msg: "System {{ inventory_hostname }}'s {{ FS_MOUNTPOINT }} utilisation is {{ dfroot.stdout }}"
