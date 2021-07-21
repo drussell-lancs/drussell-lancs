@@ -6,7 +6,7 @@
   become_user: root
   
 - name: Specifying a destination path
-   ansible.builtin.fetch:
+  ansible.builtin.fetch:
     src: /tmp/ansible-eg.txt
     dest: /tmp/
     flat: yes
