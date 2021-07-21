@@ -1,5 +1,5 @@
 ---
-- hosts: 10.42.67.248
+- hosts: "{{ duncan }}"
   serial: 1
   gather_facts: yes
 
