@@ -1,0 +1,24 @@
+{
+    "duncangroup":{
+        "hosts":[
+            "psy-shiny.lancs.ac.uk",
+            "sdo-assets2.lancs.ac.uk"
+            "boole.lancs.ac.uk"
+            "lec-cpom.lancs.ac.uk"
+        ],
+        "vars":{
+            "var1": true
+        }
+    },
+    "_meta":{
+        "hostvars":{
+            "psy-shiny.lancs.ac.uk":{
+                "type":"web"
+            },
+            "sdo-assets2.lancs.ac.uk"
+            "boole.lancs.ac.uk":{
+                "type":"database"
+            }
+        }
+    }
+}
