@@ -1,0 +1,8 @@
+---
+- hosts: lancs-linuxmgmt.lancs.ac.uk
+
+- name: Specifying a destination path
+  ansible.builtin.fetch:
+    src: /tmp/ansible-eg.txt
+    dest: /tmp/
+    flat: yes
