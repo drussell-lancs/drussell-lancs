@@ -1,6 +1,10 @@
 ---
 - hosts: lancs-linuxmgmt.lancs.ac.uk
-
+  serial: 1
+  gather_facts: yes
+  become: yes
+  become_user: root
+  
 - name: Specifying a destination path
   ansible.builtin.fetch:
     src: /tmp/ansible-eg.txt
