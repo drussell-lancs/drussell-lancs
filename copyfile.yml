@@ -2,6 +2,8 @@
 - hosts: all
   serial: 1
   gather_facts: yes
+  become: yes
+  become_user: root
 
   tasks:
   - name: Copy file with owner and permissions
