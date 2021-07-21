@@ -1,12 +1,10 @@
 ---
-- hosts: lancs-linuxmgmt.lancs.ac.uk
-  serial: 1
-  gather_facts: yes
-  become: yes
-  become_user: root
-  
-- name: Specifying a destination path
-  ansible.builtin.fetch:
-    src: /tmp/ansible-eg.txt
-    dest: /tmp/
-    flat: yes
+ - hosts: all
+ 
+ - name: Copy to AWX Specifying a destination path
+   fetch: src=/tmp/ansible-eg.txt dest=/tmp/ flat=yes
+   when: "{{ inventory_hostname == 'lancs-linuxmgmt.lancs.ac.uk' }}"
+   
+ - name: Copy to remote machine
+   copy: src=buffer/ansible-eg.txt dest=/tmp/
+   when: "{{ inventory_hostname == 'psy-shiny.lancs.ac.uk' }}"
