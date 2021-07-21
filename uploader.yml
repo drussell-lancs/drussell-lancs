@@ -5,5 +5,5 @@
     fetch: src=/tmp/ansible-eg.txt dest=/tmp/ flat=yes
     when: inventory_hostname == 'lancs-linuxmgmt.lancs.ac.uk'
   - name: Copy to remote machine
-    copy: src=buffer/ansible-eg.txt dest=/tmp/
+    copy: src=/tmp/ansible-eg.txt dest=/tmp/
     when: inventory_hostname == 'psy-shiny.lancs.ac.uk'
