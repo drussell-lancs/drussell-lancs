@@ -1,6 +1,7 @@
 [duncan]
 psy-shiny.lancs.ac.uk ansible_python_interpreter=python3
 sdo-assets2.lancs.ac.uk ansible_python_interpreter=python3
+lancs-linuxmgmt.lancs.ac.uk ansible_python_interpreter=python3
 
 [lec]
 lec-cpom.lancs.ac.uk ansible_python_interpreter=python3
