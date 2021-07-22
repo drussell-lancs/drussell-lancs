@@ -1,6 +1,6 @@
 ---
-- name: Installer With Prompts
-  hosts: "{{ HOSTS }}"
+- hosts: "{{ HOSTS }}"
+  name: Install With Prompts for which Host and what Software
   become: true
   become_user: root
 
@@ -9,14 +9,14 @@
       force_apt_get: yes
 
   tasks:
-   - name: Install software...   
+   - name: Install the software entered at the prompt   
      apt:
       name: "{{ SOFTWARE }}"
       #name: zzuf
       state: latest
       update_cache: yes
-     vars:
-       ansible_python_interpreter: /usr/bin/python3
+ #    vars:
+ #      ansible_python_interpreter: /usr/bin/python3
         
         
   # name: "{{ SOFTWARE }}"      
