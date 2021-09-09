@@ -18,6 +18,9 @@
             "sdo-assets2.lancs.ac.uk"
             "boole.lancs.ac.uk":{
                 "type":"database"
+            },
+            "lec-cpom.lancs.ac.uk":{
+                "type":"users"
             }
         }
     }
