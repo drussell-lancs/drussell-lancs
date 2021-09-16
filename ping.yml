@@ -1,6 +1,6 @@
 ---
 #- hosts: 10.42.67.248
-- hosts: psy-shiny.lancs.ac.uk
+- hosts: psy-shiny
   #serial: 1
   #gather_facts: yes
  
