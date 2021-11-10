@@ -1,6 +1,6 @@
 ---
-#- hosts: 10.42.67.248
-- hosts: psy-shiny
+- hosts: 10.42.67.248
+#- hosts: psy-shiny
   #serial: 1
   #gather_facts: yes
  
