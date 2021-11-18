@@ -1,13 +1,20 @@
 ---
-- hosts: 10.42.67.248
-#- hosts: psy-shiny
-  #serial: 1
-  #gather_facts: yes
- 
+- hosts: psy-shiny
   tasks:
   - name: Ping a machine
     action: ping
     
+
+
+
+#- hosts: 10.42.67.248
+#- hosts: psy-shiny
+  #serial: 1
+  #gather_facts: yes
+ 
+#  tasks:
+#  - name: Ping a machine
+#    action: ping
     
 #- task:
 #  hosts: 10.42.67.248
@@ -18,9 +25,9 @@
 #  serial: 1
 #  gather_facts: yes
 
- # tasks:
- # -  name: Root FS usage
- #    shell: df -h {{ FS_MOUNTPOINT }} |awk ' { print $5 } ' |grep -v Use
+# tasks:
+# -  name: Root FS usage
+#    shell: df -h {{ FS_MOUNTPOINT }} |awk ' { print $5 } ' |grep -v Use
 #     register: dfroot
 
 #  -  debug:
