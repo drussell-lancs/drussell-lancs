@@ -1,5 +1,6 @@
 ---
-- hosts: psy-shiny
+#- hosts: psy-shiny
+- hosts: 10.42.67.248
   tasks:
   - name: Ping a machine
     action: ping
