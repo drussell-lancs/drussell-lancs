@@ -6,8 +6,8 @@
 
   tasks:
   -  name: File System use
-     shell: df -h "{{ fs_mountpoint }}" |awk ' { print $5 } ' |grep -v Use
-#     shell: df -h /var |awk ' { print $5 } ' |grep -v Use
+#     shell: df -h "{{ fs_mountpoint }}" |awk ' { print $5 } ' |grep -v Use
+     shell: df -h /var |awk ' { print $5 } ' |grep -v Use
      register: dfroot
 
   -  debug:
