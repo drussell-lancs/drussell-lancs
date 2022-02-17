@@ -5,7 +5,7 @@
   gather_facts: yes
 
   tasks:
-  -  name: Root FS usage
+  -  name: File System use
      shell: df -h "{{ FS_MOUNTPOINT }}" |awk ' { print $5 } ' |grep -v Use
 #     shell: df -h /var |awk ' { print $5 } ' |grep -v Use
      register: dfroot
