@@ -6,10 +6,10 @@
 
   tasks:
   -  name: File System use
-     shell: df -h "{{ FS_MOUNTPOINT }}" |awk ' { print $5 } ' |grep -v Use
+     shell: df -h "{{ fs_mountpoint }}" |awk ' { print $5 } ' |grep -v Use
 #     shell: df -h /var |awk ' { print $5 } ' |grep -v Use
      register: dfroot
 
   -  debug:
         msg: System {{ inventory_hostname }}'s /var utilisation is {{ dfroot.stdout }}
-#       msg: System {{ inventory_hostname }}'s "{{ FS_MOUNTPOINT }}" utilisation is {{ dfroot.stdout }}
+#       msg: System {{ inventory_hostname }}'s "{{ fs_mountpoint }}" utilisation is {{ dfroot.stdout }}
