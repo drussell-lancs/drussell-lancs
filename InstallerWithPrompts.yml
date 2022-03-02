@@ -15,6 +15,9 @@
       #name: zzuf
       state: latest
       update_cache: yes
+      
+   - debug:
+      msg: "System {{ HOSTS }} has installed {{ SOFTWARE }}"
  #    vars:
  #      ansible_python_interpreter: /usr/bin/python3
         
