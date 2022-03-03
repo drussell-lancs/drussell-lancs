@@ -1,0 +1,21 @@
+---
+# How to run this, ansible-playbook plays/query.yml --extra-vars "software_prompt=digilent.adept.runtime" "hosts_promt=te7daphne"
+#
+- hosts: "{{ HOSTS }}"
+  become: yes
+  become_user: root
+  tasks:
+    - name: Does package entered exist on machine?
+      yum:
+        list: "{{ SOFTWARE }}"
+      register: yum_packages
+      
+    - name: Extract installed version
+      set_fact:
+        package_version: "{{ yum_packages|json_query(jsonquery) }}"
+      vars:
+        jsonquery: "results[?yumstate=='installed'].{name: name, version: version, release: release}"
+         
+    - debug:
+        var: package_version
+        
